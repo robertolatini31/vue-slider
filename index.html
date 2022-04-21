@@ -23,7 +23,7 @@
             </div>
             <!-- /.big_img -->
             <div class="thumbnails">
-                <img :src="photo.image" alt="" :class="index === activeImage ? 'active_img' : '' " v-for="(photo, index) in photos">
+                <img :src="photo.image" alt="" :class="index === activeImage ? 'active_img' : '' " v-for="(photo, index) in photos" @click="selectedImage">
                 <div class="navigator">
                     <div class="up_slider" @click="goUp">
                         <i class="fa-solid fa-angle-up"></i>

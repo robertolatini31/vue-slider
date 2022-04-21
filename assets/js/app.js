@@ -5,26 +5,31 @@ const app = new Vue (
             activeImage: 0,
             photos: [
                 {
+                    currentImage: 0,
                     image: './assets/img/01.jpg',
                     title: 'Svezia',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
                 },
                 {
+                    currentImage: 1,
                     image: './assets/img/02.jpg',
                     title: 'Svizzera',
                     text: 'Lorem ipsum.',
                 },
                 {
+                    currentImage: 2,
                     image: './assets/img/03.jpg',
                     title: 'Gran Bretagna',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
                 },
                 {
+                    currentImage: 3,
                     image: './assets/img/04.jpg',
                     title: 'Germania',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.',
                 },
                 {
+                    currentImage: 4,
                     image: './assets/img/05.jpg',
                     title: 'Paradise',
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
@@ -45,6 +50,10 @@ const app = new Vue (
                 } else {
                     this.activeImage--;
                 }
+            },
+            selectedImage () {
+                console.log('cliccato');
+               // console.log(this.currentImage);
             }
         }
     }
@@ -89,3 +98,13 @@ const app = new Vue (
 // Allo stesso tempo nelle miniature 
 // l'immagine attiva dovrà apparire in evidenza 
 // rispetto alle altre.
+
+// Bonus:
+// 1- al click su una thumb, visualizzare 
+// in grande l'immagine corrispondente
+
+// 2- applicare l'autoplay allo slider: 
+// ogni 3 secondi, cambia immagine automaticamente
+
+// 3- quando il mouse va in hover sullo slider, 
+// bloccare l'autoplay e farlo riprendere quando esce
