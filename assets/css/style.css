@@ -4,3 +4,29 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    display: flex;
+}
+
+.big_img {
+    width: 85%;
+    position: relative;
+}
+
+.big_img>img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 21/9;
+    object-fit: cover;
+}
+
+.photo_text {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    max-width: 90%;
+    text-align: end;
+    color: white;
+}
