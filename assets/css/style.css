@@ -54,7 +54,7 @@ img {
 
 
 
-.navigator {
+/* .navigator {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,20 @@ img {
     height: 100%;
     padding: 1rem;
     width: 100%;
+} */
+
+.up_slider, .down_slider {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.up_slider {
+    top: 28px;
+}
+
+.down_slider {
+    bottom: 10px;
 }
 
 .up_slider, .down_slider {
