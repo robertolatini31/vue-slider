@@ -25,6 +25,7 @@ img {
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: all 0.3s;
 }
 
 .big_img>img, .thumbnails>img {
@@ -77,4 +78,10 @@ img {
 
 .down_slider {
     padding: 3px 5px;
+}
+
+.active_img {
+    transform: scale(1.08);
+    border: 2px solid goldenrod;
+    border-radius: 2px;
 }

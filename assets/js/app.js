@@ -32,14 +32,14 @@ const app = new Vue (
             ],
         },
         methods: {
-            goUp() {
+            goDown() {
                 if(this.activeImage < this.photos.length - 1) {
                     this.activeImage++;
                 } else {
                     this.activeImage = 0;
                 }
             },
-            goDown () {
+            goUp() {
                 if(this.activeImage === 0) {
                     this.activeImage = this.photos.length - 1;
                 } else {
