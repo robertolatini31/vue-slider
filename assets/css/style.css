@@ -24,6 +24,7 @@ img {
     width: 15%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .big_img>img, .thumbnails>img {
@@ -47,4 +48,33 @@ img {
     max-width: 90%;
     text-align: end;
     color: white;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+
+.navigator {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+    width: 100%;
+}
+
+.up_slider, .down_slider {
+    background-color: #ccccccd1;
+    border-radius: 50%;
+    border: 1px solid #484848;;
+    cursor: pointer;
+}
+
+.up_slider {
+    padding: 2px 5px;
+}
+
+.down_slider {
+    padding: 3px 5px;
 }
