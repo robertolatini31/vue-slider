@@ -21,7 +21,9 @@
                 
             </div>
             <!-- /.big_img -->
-            <div class="thumbnails"></div>
+            <div class="thumbnails">
+                <img :src="photo.image" alt="" v-for="(photo, index) in photos">
+            </div>
             <!-- /.thumbnails -->
         </div>
         <!-- /.container -->

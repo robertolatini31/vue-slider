@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     max-width: 1000px;
+    max-height: 360px;
     margin: 4rem auto;
     display: flex;
 }
@@ -15,11 +20,24 @@
     position: relative;
 }
 
-.big_img>img {
+.thumbnails {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.big_img>img, .thumbnails>img {
     width: 100%;
-    display: block;
-    aspect-ratio: 21/9;
     object-fit: cover;
+}
+
+.big_img>img {
+    aspect-ratio: 21/9;
+    max-height: 100%;
+}
+
+.thumbnails>img {
+    height: calc(100% / 5);
 }
 
 .photo_text {
