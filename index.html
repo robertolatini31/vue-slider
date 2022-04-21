@@ -25,11 +25,11 @@
             <div class="thumbnails">
                 <img :src="photo.image" alt="" v-for="(photo, index) in photos">
                 <div class="navigator">
-                    <div class="up_slider">
+                    <div class="up_slider" @click="goUp">
                         <i class="fa-solid fa-angle-up"></i>
                     </div>
                     <!-- /.up_slider -->
-                    <div class="down_slider">
+                    <div class="down_slider" @click="goDown">
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <!-- /.down_slider -->

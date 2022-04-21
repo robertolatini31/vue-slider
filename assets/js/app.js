@@ -30,6 +30,22 @@ const app = new Vue (
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 }
             ],
+        },
+        methods: {
+            goUp() {
+                if(this.activeImage < this.photos.length - 1) {
+                    this.activeImage++;
+                } else {
+                    this.activeImage = 0;
+                }
+            },
+            goDown () {
+                if(this.activeImage === 0) {
+                    this.activeImage = this.photos.length - 1;
+                } else {
+                    this.activeImage--;
+                }
+            }
         }
     }
 
@@ -52,3 +68,24 @@ const app = new Vue (
 // avremo così la struttura base e gli stili pronti
 // per poterci poi concentrare solamente
 // sull'aspetto logico.
+
+// MILESTONE 2
+// Adesso rimuoviamo il markup statico in eccesso
+// e inseriamo le immagini dinamicamente servendoci
+// della struttura dati fornita.
+// Stampiamo prima l'immagine grande e usiamo la
+// direttiva v-for per stampare tutti i thumbnails.
+// Al termine di questa fase ci ritroveremo 
+// con lo stesso slider, ma costruito dinamicamente
+// attraverso Vue-js.
+
+// MILESTONE 3
+// Ora rendiamo lo slider dimanico.
+// Al click dell'utente sulle frecce verso
+// l'alto o verso il basso, l'immagine attiva diventa
+// visibile in formato grande a sinistra e
+// nel suo angolo in basso a destra dovranno 
+// essere aggiunti i relativi: - titolo e - testo.
+// Allo stesso tempo nelle miniature 
+// l'immagine attiva dovrà apparire in evidenza 
+// rispetto alle altre.
