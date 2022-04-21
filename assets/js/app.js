@@ -55,6 +55,9 @@ const app = new Vue (
                 this.activeImage = index;
                // console.log(this.currentImage);
             }
+        },
+        mounted: function () {
+            setInterval(this.goDown, 3000);
         }
     }
 
