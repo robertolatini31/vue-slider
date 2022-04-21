@@ -51,8 +51,8 @@ const app = new Vue (
                     this.activeImage--;
                 }
             },
-            selectedImage () {
-                console.log('cliccato');
+            selectedImage (index) {
+                this.activeImage = index;
                // console.log(this.currentImage);
             }
         }
