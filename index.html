@@ -22,7 +22,7 @@
                 
             </div>
             <!-- /.big_img -->
-            <div class="thumbnails">
+            <div class="thumbnails" @mouseover="stopInterval" @mouseleave="startInterval">
                 <img :src="photo.image" alt="" :class="index === activeImage ? 'active_img' : '' " v-for="(photo, index) in photos" @click="selectedImage(index)">
                 <!-- <div class="navigator"> -->
                     <div class="up_slider" @click="goUp">

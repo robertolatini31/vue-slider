@@ -2,6 +2,7 @@ const app = new Vue (
     {
         el: '#app',
         data: {
+            interval: '',
             activeImage: 0,
             photos: [
                 {
@@ -54,10 +55,16 @@ const app = new Vue (
             selectedImage (index) {
                 this.activeImage = index;
                // console.log(this.currentImage);
+            },
+            stopInterval () {
+                clearInterval(this.interval);
+            },
+            startInterval () {
+                this.interval = setInterval(this.goDown, 3000);
             }
         },
         mounted: function () {
-            setInterval(this.goDown, 3000);
+            this.interval = setInterval(this.goDown, 3000);
         }
     }
 
